@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5Fl5kXmiWNHuWIJBV5kQ2QUxXJSnpJnACAamth7ygJ8=",
+  "Source": "ServiceC2",
+  "BasePath": "_content/ServiceC2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

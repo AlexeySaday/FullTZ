@@ -1,7 +1,7 @@
-﻿using Confluent.Kafka;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Confluent.Kafka; 
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging; 
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection; 
 
 namespace ServiceA
 {
@@ -40,7 +40,7 @@ namespace ServiceA
                     Value = $"{WeatherData.GetWeatherForecasts().fullWeatherForecast}\n{WeatherData.GetWeatherForecasts().timeOfGet}"
                 }, cancellationToken);
                 logger.LogInformation("Сообщение отправлено");
-                Thread.Sleep(TimeSpan.FromSeconds(2));
+                await Task.Delay(TimeSpan.FromSeconds(2));
             }
         }
         public Task StopAsync(CancellationToken cancellationToken)

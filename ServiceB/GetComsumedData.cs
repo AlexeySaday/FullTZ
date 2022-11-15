@@ -1,12 +1,12 @@
-﻿namespace WebApplication2
+﻿namespace ServiceC
 {
     public class GetConsumedData
     {
-        public static List<OnlyNeedfulForecast> Forecasts; 
+        public static List<OnlyNeedfulForecast> Forecasts { get; private set; }
         static GetConsumedData()
         {
             Forecasts = new List<OnlyNeedfulForecast>();
-        }
+        } 
         public void SetWeather(OnlyNeedfulForecast forecast)
         { 
             if(Forecasts.Count() == 10)

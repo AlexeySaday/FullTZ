@@ -1,4 +1,4 @@
-﻿namespace WebApplication2
+﻿namespace ServiceC
 {
     public class OnlyNeedfulForecast
     {
