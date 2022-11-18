@@ -1631,11 +1631,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\SeviceA\\ServiceA\\ServiceA.csproj",
+      "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA\\ServiceA.csproj",
       "projectName": "ServiceA",
-      "projectPath": "C:\\Users\\Hp\\source\\repos\\SeviceA\\ServiceA\\ServiceA.csproj",
+      "projectPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA\\ServiceA.csproj",
       "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hp\\source\\repos\\SeviceA\\ServiceA\\obj\\",
+      "outputPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

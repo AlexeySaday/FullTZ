@@ -27,20 +27,20 @@ namespace ServiceA
             this.logger = logger;
             var config = new ProducerConfig
             {
-                BootstrapServers = "localhost:9092"
+                BootstrapServers = "localhost:9092", 
             };
             producer = new ProducerBuilder<Null, string>(config).Build();
         }
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             while (true)
-            {
+            { 
                 await producer.ProduceAsync("topic-weather", new Message<Null, string>
                 {
                     Value = $"{WeatherData.GetWeatherForecasts().fullWeatherForecast}\n{WeatherData.GetWeatherForecasts().timeOfGet}"
                 }, cancellationToken);
                 logger.LogInformation("Сообщение отправлено");
-                await Task.Delay(TimeSpan.FromMinutes(1));
+                await Task.Delay(TimeSpan.FromSeconds(1));
             }
         }
         public Task StopAsync(CancellationToken cancellationToken)

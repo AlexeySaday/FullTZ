@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SGyDN1ZOI7Et00qGWp4nuCNW7xVRzOKWSZahopxzjaUfSMHUBkaVmz371Rajw3T8STj7U07h8RqFIunMu9IGnA==",
+  "dgSpecHash": "GlOoFkbUkrPK+lPidPMv2iCcVD7AWbSuPMJn+nuWXioIFJ2f7NezGoAJy1xWD6+lCUgnWdpY6rVMuVIHlVsI5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hp\\source\\repos\\SeviceA\\ServiceA\\ServiceA.csproj",
+  "projectFilePath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA\\ServiceA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hp\\.nuget\\packages\\confluent.kafka\\1.9.3\\confluent.kafka.1.9.3.nupkg.sha512",
     "C:\\Users\\Hp\\.nuget\\packages\\librdkafka.redist\\1.9.2\\librdkafka.redist.1.9.2.nupkg.sha512",
