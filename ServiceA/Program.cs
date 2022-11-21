@@ -40,7 +40,7 @@ namespace ServiceA
                     Value = $"{WeatherData.GetWeatherForecasts().fullWeatherForecast}\n{WeatherData.GetWeatherForecasts().timeOfGet}"
                 }, cancellationToken);
                 logger.LogInformation("Сообщение отправлено");
-                await Task.Delay(TimeSpan.FromSeconds(1));
+                await Task.Delay(TimeSpan.FromMinutes(1));
             }
         }
         public Task StopAsync(CancellationToken cancellationToken)
