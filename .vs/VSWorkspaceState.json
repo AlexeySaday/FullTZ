@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ServiceA1",
+    "\\ServiceB",
+    "\\ServiceC",
+    "\\ServiceC\\bin",
+    "\\ServiceC\\bin\\Debug",
+    "\\ServiceC\\bin\\Release",
+    "\\ServiceC\\bin\\Release\\net6.0",
+    "\\ServiceC\\Controllers",
+    "\\ServiceC\\obj"
+  ],
+  "SelectedNode": "\\ServiceC\\obj\\ServiceC.csproj.nuget.g.props",
+  "PreviewInSolutionExplorer": false
+}

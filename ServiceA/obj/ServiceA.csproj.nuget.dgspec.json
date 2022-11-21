@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA\\ServiceA.csproj": {}
+    "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\ServiceA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA\\ServiceA.csproj": {
+    "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\ServiceA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA\\ServiceA.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\ServiceA.csproj",
         "projectName": "ServiceA",
-        "projectPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA\\ServiceA.csproj",
+        "projectPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\ServiceA.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA\\obj\\",
+        "outputPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,13 +44,21 @@
               "target": "Package",
               "version": "[1.9.3, )"
             },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[7.0.0, )"
             },
-            "Microsoft.Extensions.Hosting.Abstractions": {
+            "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[7.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

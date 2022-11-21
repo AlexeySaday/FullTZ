@@ -1,4 +1,4 @@
-﻿ namespace ServiceA
+﻿namespace ServiceA
 {
     public class OnlyNeedfulForecast
     {

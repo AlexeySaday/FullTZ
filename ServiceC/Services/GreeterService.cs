@@ -1,4 +1,4 @@
-using Grpc.Core; 
+п»їusing Grpc.Core;
 
 namespace ServiceC.Services
 {
@@ -15,7 +15,7 @@ namespace ServiceC.Services
         {
             getter.ForecastFromGrpc(request.Description, request.Time.ToDateTime());
             ReplyFromServiceC replyFromServiceC = new ReplyFromServiceC();
-            replyFromServiceC.Status = "ServiceC получил двнные";
+            replyFromServiceC.Status = "ServiceC ГЇГ®Г«ГіГ·ГЁГ« Г¤ГўГ­Г­Г»ГҐ";
             return Task.FromResult(replyFromServiceC);
         }
     }

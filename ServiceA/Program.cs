@@ -1,7 +1,7 @@
-﻿using Confluent.Kafka; 
+﻿using Confluent.Kafka;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.DependencyInjection; 
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ServiceA
 {
@@ -11,7 +11,7 @@ namespace ServiceA
         {
             CreateHostBuilder(args).Build().Run();
         }
-        private static IHostBuilder CreateHostBuilder(string[] args) =>
+        private static IHostBuilder CreateHostBuilder(string[] args) => 
             Host.CreateDefaultBuilder(args)
             .ConfigureServices((context, collection) =>
             {
@@ -27,14 +27,14 @@ namespace ServiceA
             this.logger = logger;
             var config = new ProducerConfig
             {
-                BootstrapServers = "localhost:9092", 
+                BootstrapServers = "localhost:9092",
             };
             producer = new ProducerBuilder<Null, string>(config).Build();
         }
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             while (true)
-            { 
+            {
                 await producer.ProduceAsync("topic-weather", new Message<Null, string>
                 {
                     Value = $"{WeatherData.GetWeatherForecasts().fullWeatherForecast}\n{WeatherData.GetWeatherForecasts().timeOfGet}"

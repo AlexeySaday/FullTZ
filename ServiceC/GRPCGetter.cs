@@ -1,8 +1,4 @@
-﻿using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using Grpc.Net.Client;
-
-namespace ServiceC
+﻿namespace ServiceC
 {
     public class GRPCGetter
     {
@@ -23,4 +19,4 @@ namespace ServiceC
             else needfulForecasts.Add(forecast);
         }
     }
-}
+}   
