@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\FullTZ.csproj": {}
+    "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceC\\ServiceC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\FullTZ.csproj": {
+    "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceC\\ServiceC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\FullTZ.csproj",
-        "projectName": "FullTZ",
-        "projectPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\FullTZ.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceC\\ServiceC.csproj",
+        "projectName": "ServiceA",
+        "projectPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceC\\ServiceC.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\obj\\",
+        "outputPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.50.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -51,6 +57,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

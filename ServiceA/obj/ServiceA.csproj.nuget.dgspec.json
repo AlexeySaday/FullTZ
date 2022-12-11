@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\ServiceA.csproj": {}
+    "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA1\\ServiceA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\ServiceA.csproj": {
+    "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA1\\ServiceA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\ServiceA.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA1\\ServiceA.csproj",
         "projectName": "ServiceA",
-        "projectPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\ServiceA.csproj",
+        "projectPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA1\\ServiceA.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\FullTZ\\obj\\",
+        "outputPath": "C:\\Users\\Hp\\source\\repos\\FullTZ\\ServiceA1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -62,7 +62,11 @@
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[13.0.2, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

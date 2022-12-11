@@ -24,7 +24,7 @@
         public int grnd_level { get; set; }
     }
 
-    public class WeatherForecast
+    public class ForecastForExternalApi
     {
         public Coord coord { get; set; }
         public List<Weather> weather { get; set; }
@@ -68,4 +68,4 @@
 
 
     #endregion
-} 
+}

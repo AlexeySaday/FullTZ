@@ -1,25 +1,59 @@
 ﻿using Newtonsoft.Json;
+using System.Configuration; 
+using Microsoft.Extensions.Logging;
 
 namespace ServiceA
-{
-    public static class WeatherData
+{  
+    class WeatherData
     {
-        static HttpClient _httpClient;
-        static List<OnlyNeedfulForecast> forecasts;
+        private ILogger _logger;
 
-        static WeatherData()
+        private double Temperature;
+        private double WindSpeed;
+        private string WeatherDescription;
+
+        private IObserver _observer; 
+        private HttpClient _httpClient; 
+         
+        public WeatherData(IObserver listeningOfWeather)
         {
+            var loggerFactory = LoggerFactory.Create(builder =>
+            {
+                builder.AddConsole(); 
+            });
+            _logger = loggerFactory.CreateLogger<WeatherData>();
             _httpClient = new HttpClient();
-            forecasts = new List<OnlyNeedfulForecast>();
+            _observer = listeningOfWeather; 
         }
-        public static OnlyNeedfulForecast GetWeatherForecasts()
+        public async Task ExternalApiRequest()
         {
-            string url = @"https://api.openweathermap.org/data/2.5/weather?lat=55.79&lon=49.12&lang=ru&appid=5c6602453fefa2b08e907fde0a5652a3&units=metric";
-            string json = _httpClient.GetStringAsync(url).Result;
+            await Task.Run(async () =>
+            {
+                while (true)
+                {
+                    await MeasurementChanged();
+                    await Task.Delay(3000);
+                } 
+            });
+        }
+        private async Task MeasurementChanged()
+        { 
+            string jsonFormatWeather = _httpClient.GetStringAsync(ConfigurationManager.AppSettings.Get("UrlForExternalApi")).Result;
+            ForecastForExternalApi? deserializeWeather = JsonConvert.DeserializeObject<ForecastForExternalApi>(jsonFormatWeather);
 
-            WeatherForecast weather = JsonConvert.DeserializeObject<WeatherForecast>(json); /*{weather.weather[0].description}*//*{weather.wind.speed}*//*{weather.main.temp}*/
-            string weatherDescription = $"На улице  {weather.weather[0].description}, скорость ветра порядка {weather.wind.speed} м/с, температура - {weather.main.temp}";
-            return new OnlyNeedfulForecast(weatherDescription, DateTime.Now);
+            if (deserializeWeather != null)
+            {
+                Temperature = deserializeWeather.main.temp;
+                WindSpeed = deserializeWeather.wind.speed;
+                WeatherDescription = deserializeWeather.weather[0].description; 
+
+                await _observer.UpdateForecast(Temperature, WindSpeed, WeatherDescription); 
+                _logger.LogInformation("Data from the api is received and modified in the observer");
+            }
+            else
+            {
+                _logger.LogError("An empty message was received from the external api");
+            }  
         }
     }
 }

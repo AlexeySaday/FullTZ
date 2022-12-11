@@ -34,7 +34,7 @@ namespace ServiceB
                 {
                     _logger.LogInformation("ServiceC получил данные с кафки");
                     forecast = (OnlyNeedfulForecast)responce.Message.Value;
-                    var reply = await client.SetWeatherAsync(new WeatherRequest { Description = forecast.fullWeatherForecast, Time = Timestamp.FromDateTime(DateTime.SpecifyKind(forecast.timeOfGet, DateTimeKind.Utc)) });
+                    var reply = await client.SetWeatherAsync(new WeatherRequest { Description = forecast.FullWeatherForecast, Time = Timestamp.FromDateTime(DateTime.SpecifyKind(forecast.TimeOfGet, DateTimeKind.Utc)) });
                     _logger.LogInformation(reply.Status);
                 }
             }

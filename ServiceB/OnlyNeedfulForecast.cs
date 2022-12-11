@@ -2,12 +2,12 @@
 {
     public class OnlyNeedfulForecast
     {
-        public string fullWeatherForecast { get; set; }
-        public DateTime timeOfGet { get; set; }
+        public string FullWeatherForecast { get; set; }
+        public DateTime TimeOfGet { get; set; }
         public OnlyNeedfulForecast(string fullWeatherForecast, DateTime timeOfGet)
         {
-            this.fullWeatherForecast = fullWeatherForecast;
-            this.timeOfGet = timeOfGet;
+            this.FullWeatherForecast = fullWeatherForecast;
+            this.TimeOfGet = timeOfGet;
         }
         public static explicit operator OnlyNeedfulForecast(string forecast)
         {
